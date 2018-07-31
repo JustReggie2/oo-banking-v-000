@@ -26,4 +26,5 @@ class BankAccount
     @balance = 0
     @status = "closed"
   end
+
 end
