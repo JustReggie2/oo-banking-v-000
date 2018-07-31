@@ -19,7 +19,7 @@ class Transfer
     elsif @status == "complete"
       @status = "rejected"
     else
-      @sender.balance >= @amount
+      #@sender.balance >= @amount
       @receiver.deposit(@amount)
       @sender.deposit(-@amount)
       @status = "complete"
