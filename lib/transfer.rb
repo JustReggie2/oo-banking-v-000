@@ -16,13 +16,13 @@ class Transfer
     if @sender.balance < @amount
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
-    elsif @status == "completed"
+    elsif @status == "complete"
       @status = "rejected"
     else
       @sender.balance >= @amount
       @receiver.deposit(@amount)
       @sender.deposit(-@amount)
-      @status = "completed"      
+      @status = "complete"      
     end
   end
 
